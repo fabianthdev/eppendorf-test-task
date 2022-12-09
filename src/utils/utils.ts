@@ -10,3 +10,12 @@ export const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)
 // - at least one special character
 // - at least eight characters in total
 export const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+
+
+export function fmtMoney(amount: number, currency: string = "EUR", forceSign: boolean = false): string {
+    return new Intl.NumberFormat(undefined, { style: 'currency', currency: currency, signDisplay: forceSign ? 'always' : 'auto' }).format(amount);
+}
+
+export function fmtDateString(dateString: string): string {
+    return Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(Date.parse(dateString))
+}

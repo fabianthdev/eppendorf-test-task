@@ -1,0 +1,25 @@
+export enum DeviceType {
+    Good = "good",
+    Ok = "ok",
+    Mediocre = "mediocre",
+    Bad = "bad",
+    Broken = "broken",
+}
+
+export enum DeviceHealth {
+    Centrifuge = "centrifuge",
+    Cycler = "cycler",
+    Freezer = "freezer",
+    Pipette = "pipette",
+    Shaker = "shaker",
+}
+
+export default interface Device {
+    id: number
+    location: string
+    type: DeviceType
+    device_health: DeviceHealth
+    last_used: string
+    price: number
+    color: string
+} 

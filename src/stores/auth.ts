@@ -54,7 +54,7 @@ export const useAuthStore = defineStore({
 
 
         storeLoginData(data: ApiLoginResponse) {
-            // TODO: Store data
+            // Store the data volatilely
             this.accessToken = data.access_token
             this.refreshToken = data.refresh_token
 
