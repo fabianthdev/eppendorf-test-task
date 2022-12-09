@@ -1,7 +1,7 @@
 # Eppendorf Front End Challenge
 
 - Use the data in the provided data.json file to visualise a sortable table/list of entries
-- Create a simple form with the folowing requirements
+- Create a simple form with the following requirements
 
   - Name Input
 
