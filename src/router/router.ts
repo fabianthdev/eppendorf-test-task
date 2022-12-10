@@ -9,6 +9,7 @@ declare module 'vue-router' {
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from "@/components/views/Auth/LoginView.vue"
 import MainView from "@/components/views/MainView.vue"
+import DeviceListView from "@/components/views/Devices/DeviceListView.vue"
 import { useAuthStore } from '../stores/auth'
 
 const router = createRouter({
@@ -25,6 +26,15 @@ const router = createRouter({
         {
             path: "/",
             component: MainView,
+            meta: {
+                requiresAuth: true,
+            },
+        },
+        {
+            name: "Device List",
+            path: "/devices/:deviceType?",
+            component: DeviceListView,
+            props: true,
             meta: {
                 requiresAuth: true,
             },

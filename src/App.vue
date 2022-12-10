@@ -4,7 +4,7 @@
 
 <style lang="css">
 
-#app {
+html {
     @apply bg-white dark:bg-neutral-900 dark:text-white -z-40;
 }
 

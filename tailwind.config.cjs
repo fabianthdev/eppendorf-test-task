@@ -5,7 +5,12 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#0035ad",
+        accent: "#2ea8ef",
+      },
+    },
   },
   plugins: [require("prettier-plugin-tailwindcss")],
 };

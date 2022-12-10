@@ -1,4 +1,5 @@
-
+import colors from 'tailwindcss/colors'
+import { DeviceHealth } from "@/models/Device"
 
 // This email regex is taken from https://emailregex.com and should work with almost every
 // email address that conforms to RFC 5322.
@@ -10,6 +11,15 @@ export const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)
 // - at least one special character
 // - at least eight characters in total
 export const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+
+
+export const deviceHealthColor: { [key in DeviceHealth]: string } = {
+    [DeviceHealth.Good]: colors.green[600],
+    [DeviceHealth.Ok]: colors.lime[600],
+    [DeviceHealth.Mediocre]: colors.yellow[600],
+    [DeviceHealth.Bad]: colors.amber[600],
+    [DeviceHealth.Broken]: colors.red[500],
+}
 
 
 export function fmtMoney(amount: number, currency: string = "EUR", forceSign: boolean = false): string {
