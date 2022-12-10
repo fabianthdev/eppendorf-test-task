@@ -1,4 +1,4 @@
-export enum DeviceType {
+export enum DeviceHealth {
     Good = "good",
     Ok = "ok",
     Mediocre = "mediocre",
@@ -6,7 +6,7 @@ export enum DeviceType {
     Broken = "broken",
 }
 
-export enum DeviceHealth {
+export enum DeviceType {
     Centrifuge = "centrifuge",
     Cycler = "cycler",
     Freezer = "freezer",
