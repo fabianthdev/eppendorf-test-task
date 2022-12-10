@@ -7,6 +7,10 @@ defineProps({
         type: String as PropType<ButtonStyle>,
         required: true,
     },
+    disabled: {
+        type: Boolean,
+        default: false,
+    },
 })
 
 </script>
@@ -22,7 +26,7 @@ export enum ButtonStyle {
 </script>
 
 <template>
-    <button class="px-6 py-2 rounded-lg text-white font-semibold transition-all" :class="style">
+    <button class="px-6 py-2 rounded-lg text-white font-semibold transition-all" :class="style" :disabled="disabled">
         <slot></slot>
     </button>
 </template>
@@ -39,6 +43,10 @@ button.secondary {
 
 button.danger {
     @apply bg-red-600 hover:bg-red-800;
+}
+
+button:disabled {
+    @apply hover:bg-opacity-100 opacity-60;
 }
 
 </style>
