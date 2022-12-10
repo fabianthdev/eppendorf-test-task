@@ -42,7 +42,11 @@ export const useAuthStore = defineStore({
         },
 
         async logout() {
-
+            try {
+                await AuthenticationService.logout()
+            } catch (error) {
+                // Fail silently
+            }
 
             // Reset this store
             this.$reset()

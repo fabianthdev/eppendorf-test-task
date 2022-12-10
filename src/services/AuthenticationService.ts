@@ -36,6 +36,15 @@ class AuthenticationService {
             })
         })
     }
+
+    async logout() {
+        return new Promise<MockNetworkResult<unknown>>((resolve, reject) => {
+            return resolve({
+                statusCode: 200,
+                data: undefined
+            })
+        })
+    }
 }
 
 export default new AuthenticationService
