@@ -55,6 +55,7 @@ Technologies:
 - Vite
 - TailwindCSS
 - Language: TypeScript
+- GitHub Actions for production build on push on main branch, with exported artifact
 
 
 ## UI Design Considerations
